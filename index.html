@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+
+    <div class="canvas-container">
+        <section class="controller">
+            <input type="color" class="color-btn stroke-btn" onchange="onChangeStroke(this.value)">
+            <input type="color" class="color-btn fill-btn" onchange="onChangeFill(this.value)">
+            <select name="" id="" onchange="onChangeShap(this.value)">
+                <option value="rec">Rec</option>
+                <option value="tri">Tri</option>
+                <option value="cir">cir</option>
+            </select>
+                <a href="#" class="btn" download="my-Image.jpg" onclick="downloadImg(this)">Save</a>
+                <button class="btn cleat-btn" onclick="onClear()">Clear</button>
+                <button class="btn upload-btn" onclick="onUploadImg()">Share On Fackbook</button>
+               
+                <label class="custom-file-upload">
+                    <input type="file" onchange="onImgInput(event)">
+                    ⏏ Upload Image
+                </label>               
+               
+                
+        </section>
+        <canvas height="500" width="500"></canvas>
+    </div>
+    <script src="js/upload.service.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>
